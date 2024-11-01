@@ -1,0 +1,11 @@
+com/backend/autos_pruebas/controllers/VehiculoController.class
+com/backend/autos_pruebas/repositories/ModeloRepository.class
+com/backend/autos_pruebas/models/Modelo.class
+com/backend/autos_pruebas/repositories/VehiculoRepository.class
+com/backend/autos_pruebas/services/VehiculoService.class
+com/backend/autos_pruebas/models/Marca.class
+com/backend/autos_pruebas/models/Prueba.class
+com/backend/autos_pruebas/repositories/MarcaRepository.class
+com/backend/autos_pruebas/AutosPruebasApplication.class
+com/backend/autos_pruebas/models/Posicion.class
+com/backend/autos_pruebas/models/Vehiculo.class

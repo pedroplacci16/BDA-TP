@@ -1,0 +1,8 @@
+com/agencia/empleadosclientes/customException/InvalidLicenseException.class
+com/agencia/empleadosclientes/controllers/InteresadoController.class
+com/agencia/empleadosclientes/services/InteresadoService.class
+com/agencia/empleadosclientes/repositories/InteresadoRepository.class
+com/agencia/empleadosclientes/controllers/EmpleadoController.class
+com/agencia/empleadosclientes/services/EmpleadoService.class
+com/agencia/empleadosclientes/models/Interesado.class
+com/agencia/empleadosclientes/repositories/EmpleadoRepository.class

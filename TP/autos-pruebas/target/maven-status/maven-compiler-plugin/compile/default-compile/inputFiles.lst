@@ -1,0 +1,11 @@
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/AutosPruebasApplication.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/controllers/VehiculoController.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/models/Marca.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/models/Modelo.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/models/Posicion.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/models/Prueba.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/models/Vehiculo.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/repositories/MarcaRepository.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/repositories/ModeloRepository.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/repositories/VehiculoRepository.java
+/home/pedro/Desktop/BDA/TP/autos-pruebas/src/main/java/com/backend/autos_pruebas/services/VehiculoService.java
