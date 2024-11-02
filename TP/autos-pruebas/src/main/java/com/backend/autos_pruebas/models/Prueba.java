@@ -3,6 +3,7 @@ package com.backend.autos_pruebas.models;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Data
 @Entity
@@ -26,11 +27,14 @@ public class Prueba {
 
     @Column(name = "FECHA_HORA_INICIO")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private Date fechaHoraInicio;
 
     @Column(name = "FECHA_HORA_FIN")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private Date fechaHoraFin;
+
 
     @Column(name = "COMENTARIOS")
     private String comentarios;

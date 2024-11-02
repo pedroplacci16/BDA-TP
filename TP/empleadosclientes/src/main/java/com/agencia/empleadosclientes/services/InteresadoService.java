@@ -58,4 +58,20 @@ public class InteresadoService {
             throw new InvalidLicenseException("La licencia está vencida. No se puede registrar con una licencia vencida");
         }
     }
+    public boolean canDrive(Long id) {
+        Interesado interesado = getInteresadoById(id);
+
+        if (interesado.getRestringido()) {
+            return false;
+        }
+
+        Date currentDate = new Date();
+        if (interesado.getFechaVencimientoLicencia() == null ||
+                interesado.getFechaVencimientoLicencia().before(currentDate)) {
+            return false;
+        }
+
+        return true;
+    }
+
 }

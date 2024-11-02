@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,18 @@ public class InteresadoController {
         Interesado interesado = interesadoService.getInteresadoById(id);
         return ResponseEntity.ok(interesado);
     }
+    @GetMapping("/{id}/can-drive")
+    public ResponseEntity<Map<String, Object>> validateDrivingStatus(@PathVariable Long id) {
+        Map<String, Object> response = new HashMap<>();
+        boolean canDrive = interesadoService.canDrive(id);
+
+        response.put("id", id);
+        response.put("canDrive", canDrive);
+        response.put("validatedAt", new Date());
+
+        return ResponseEntity.ok(response);
+    }
+
 
     @PostMapping
     public ResponseEntity<?> createInteresado(@RequestBody Interesado interesado) {
