@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.backend.api_gateway.ApiGatewayApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.575 s -- in com.backend.api_gateway.ApiGatewayApplicationTests
