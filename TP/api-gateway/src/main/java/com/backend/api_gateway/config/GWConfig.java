@@ -72,11 +72,15 @@ public class GWConfig {
                 .route("pruebas-en-curso-service", r -> r
                         .path("/api/pruebas/en-curso/**")
                         .uri("http://localhost:8085"))
+                .route("finalizar-prueba-service", r -> r
+                        .path("/api/pruebas/*/finalizar")
+                        .uri("http://localhost:8085"))
+                .route("posiciones-service", r -> r
+                        .path("/api/posiciones/**")
+                        .uri("http://localhost:8085"))
                 .route("autos-service", r -> r
                         .path("/api/vehiculos/**")
                         .uri("http://localhost:8085"))
                 .build();
     }
-
-
 }

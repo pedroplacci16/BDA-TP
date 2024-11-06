@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
@@ -39,6 +41,26 @@ public class PruebaController {
 //        LocalDateTime momentoConsulta = momento != null ? momento : LocalDateTime.now();
         return ResponseEntity.ok(pruebaService.getPruebasEnCurso(momentoConsulta));
     }
+    @PatchMapping("/{id}/finalizar")
+    public ResponseEntity<?> finalizarPrueba(
+            @PathVariable Integer id,
+            @RequestBody Map<String, Object> request) {
+        try {
+            String comentarios = (String) request.get("comentarios");
+            Date fechaHoraFin = request.get("fechaHoraFin") != null ?
+                    new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse((String) request.get("fechaHoraFin")) :
+                    new Date();
+
+            Prueba prueba = pruebaService.finalizarPrueba(id, comentarios, fechaHoraFin);
+            return ResponseEntity.ok(prueba);
+        } catch (RuntimeException | ParseException e) {
+            return ResponseEntity
+                    .status(HttpStatus.NOT_FOUND)
+                    .body(Map.of("error", e.getMessage()));
+        }
+    }
+
+
 
 
 

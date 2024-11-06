@@ -2,6 +2,8 @@ package com.backend.autos_pruebas.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "Vehiculos")

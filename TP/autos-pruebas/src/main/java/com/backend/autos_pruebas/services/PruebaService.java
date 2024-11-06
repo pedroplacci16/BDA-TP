@@ -28,6 +28,21 @@ public class PruebaService {
             return pruebaRepository.findAll();
         }
 
+    public Prueba finalizarPrueba(Integer id, String comentarios, Date fechaHoraFin) {
+        Prueba prueba = pruebaRepository.findById(id.longValue())
+                .orElseThrow(() -> new RuntimeException("Prueba no encontrada"));
+
+        if (fechaHoraFin.before(prueba.getFechaHoraInicio())) {
+            throw new RuntimeException("La fecha de finalización no puede ser anterior a la fecha de inicio");
+        }
+
+        prueba.setComentarios(comentarios);
+        prueba.setFechaHoraFin(fechaHoraFin);
+
+        return pruebaRepository.save(prueba);
+    }
+
+
 
 
     public Prueba registrarPrueba(Prueba prueba) {
